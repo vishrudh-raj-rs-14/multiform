@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Multi Form</title>
+  </head>
+  <body>
+    <div class="body">
+      <div class="form-container">
+        <div class="agenda">
+          <div class="agenda-contents">
+            <div class="steps">
+              <div class="num active">1</div>
+              <div class="agenda-text">
+                <span class="agenda-text-sub">STEP 1</span>
+                <span class="agenda-text-main">YOUR INFO</span>
+              </div>
+            </div>
+            <div class="steps">
+              <div class="num">2</div>
+              <div class="agenda-text">
+                <span class="agenda-text-sub">STEP 2</span>
+                <span class="agenda-text-main">SELECT PLAN</span>
+              </div>
+            </div>
+            <div class="steps">
+              <div class="num">3</div>
+              <div class="agenda-text">
+                <span class="agenda-text-sub">STEP 3</span>
+                <span class="agenda-text-main">ADD-ONS</span>
+              </div>
+            </div>
+            <div class="steps">
+              <div class="num">4</div>
+              <div class="agenda-text">
+                <span class="agenda-text-sub">STEP 4</span>
+                <span class="agenda-text-main">SUMMARY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <div class="form-inner">
+            <div class="form-contents">
+              <div class="form-heading">
+                <span class="form-heading-text">Personal info</span
+                ><span class="form-heading-subline"
+                  >Please provide your name, email address, and phone
+                  number.</span
+                >
+              </div>
+              <div class="form-inputs">
+                <div class="form-content-input">
+                  <span class="form-content-input-text">Name</span>
+                  <span class="invalid-text">This field is required</span>
+                  <input
+                    class="form-content-input-field"
+                    placeholder="e.g. John Smith"
+                    data-type="name"
+                  />
+                </div>
+                <div class="form-content-input">
+                  <span class="form-content-input-text">Email Address</span>
+                  <span class="invalid-text">This field is required</span>
+                  <input
+                    class="form-content-input-field"
+                    placeholder="e.g. john007@gmail.com"
+                    data-type="email"
+                  />
+                </div>
+                <div class="form-content-input">
+                  <span class="form-content-input-text">Phone Number</span>
+                  <span class="invalid-text text-shake"
+                    >This field is required</span
+                  >
+                  <input
+                    class="form-content-input-field"
+                    placeholder="e.g. 1 234 567 890"
+                    data-type="mobile"
+                  />
+                </div>
+              </div>
+              <div class="form-btn">
+                <button class="back hide" data-inps="0" data-inpe="2">
+                  Go Back
+                </button>
+                <button class="form-btn-submit" data-inps="0" data-inpe="2">
+                  Next Step
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="form-inner hide">
+            <div class="form-contents">
+              <div class="form-heading">
+                <span class="form-heading-text">Select your plan</span
+                ><span class="form-heading-subline"
+                  >You have the option of monthly or yearly billing.</span
+                >
+              </div>
+              <div class="form-inputs">
+                <div class="radio">
+                  <div class="radio_ele">
+                    <input
+                      type="radio"
+                      name="plan"
+                      class="form-radio"
+                      id="plan_1"
+                      value="Arcade"
+                      data-price="9"
+                      checked
+                    />
+                    <label for="plan_1">
+                      <div class="radio-coc">
+                        <img src="./assets/icon-arcade.svg" />
+                        <div class="plan-text">
+                          Arcade<span class="price">$9/mo</span>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="radio_ele">
+                    <input
+                      type="radio"
+                      name="plan"
+                      class="form-radio"
+                      id="plan_2"
+                      value="Advanced"
+                      data-price="12"
+                    />
+                    <label for="plan_2">
+                      <div class="radio-coc">
+                        <img src="./assets/icon-advanced.svg" />
+                        <div class="plan-text">
+                          Advanced<span class="price">$12/mo</span>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="radio_ele">
+                    <input
+                      type="radio"
+                      name="plan"
+                      class="form-radio"
+                      id="plan_3"
+                      value="Pro"
+                      data-price="15"
+                    />
+                    <label for="plan_3">
+                      <div class="radio-coc">
+                        <img src="./assets/icon-pro.svg" />
+                        <div class="plan-text">
+                          Pro<span class="price">$15/mo</span>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="toggle">
+                  <span class="plan-type mon">Monthly</span>
+                  <div class="toggle-btn">
+                    <input type="checkbox" id="toggle-btn-slide" />
+                    <label for="toggle-btn-slide"
+                      ><div class="toggle-circle"></div
+                    ></label>
+                  </div>
+                  <span class="plan-type yer">Yearly</span>
+                </div>
+              </div>
+              <div class="form-btn">
+                <button class="back" data-inps="0" data-inpe="2">
+                  Go Back
+                </button>
+                <button class="form-btn-submit" data-inps="3" data-inpe="3">
+                  Next Step
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="form-inner hide">
+            <div class="form-contents">
+              <div class="form-heading">
+                <span class="form-heading-text">Pick add-ons</span>
+                <span class="form-heading-subline"
+                  >Add-ons help enhance your gaming experience.
+                </span>
+              </div>
+              <div class="form-inputs">
+                <label for="checkbox-1">
+                  <div class="checkbox-coc">
+                    <div class="tick">
+                      <input
+                        type="checkbox"
+                        value="online-service"
+                        id="checkbox-1"
+                        data-name="Online services"
+                        data-price="1"
+                      />
+                    </div>
+                    <div class="checkbox-content">
+                      <div class="checkbox-content-head">Online services</div>
+                      <div class="checkbox-content-sub">
+                        Access to multiplayer Games
+                      </div>
+                    </div>
+                    <div class="checkbox-amt">+$1/mo</div>
+                  </div>
+                </label>
+                <label for="checkbox-2">
+                  <div class="checkbox-coc">
+                    <div class="tick">
+                      <input
+                        type="checkbox"
+                        value="online-service"
+                        id="checkbox-2"
+                        data-name="Larger storage"
+                        data-price="2"
+                      />
+                    </div>
+                    <div class="checkbox-content">
+                      <div class="checkbox-content-head">Larger storage</div>
+                      <div class="checkbox-content-sub">
+                        Extra 1TB of cloud save
+                      </div>
+                    </div>
+                    <div class="checkbox-amt">+$2/mo</div>
+                  </div>
+                </label>
+                <label for="checkbox-3">
+                  <div class="checkbox-coc" for="checkbox-1">
+                    <div class="tick">
+                      <input
+                        type="checkbox"
+                        value="online-service"
+                        id="checkbox-3"
+                        data-name="Customizable Profile"
+                        data-price="2"
+                      />
+                    </div>
+                    <div class="checkbox-content">
+                      <div class="checkbox-content-head">
+                        Customizable Profile
+                      </div>
+                      <div class="checkbox-content-sub">
+                        Custom theme on your profile
+                      </div>
+                    </div>
+                    <div class="checkbox-amt">+$2/mo</div>
+                  </div>
+                </label>
+              </div>
+              <div class="form-btn">
+                <button class="back" data-inps="0" data-inpe="2">
+                  Go Back
+                </button>
+                <button class="form-btn-submit" data-inps="5" data-inpe="7">
+                  Next Step
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="form-inner hide">
+            <div class="form-contents">
+              <div class="form-heading">
+                <span class="form-heading-text">Finishing up</span
+                ><span class="form-heading-subline"
+                  >Double-check everything looks OK before confirming.</span
+                >
+              </div>
+              <div class="form-inputs">
+                <div class="final">
+                  <div class="final-in">
+                    <div class="final-1">
+                      <span>Arcade (Monthly)</span><span>Change</span>
+                    </div>
+                    <div class="final-amt">$9/mo</div>
+                  </div>
+                  <hr />
+                  <div class="final-out"></div>
+                </div>
+                <div class="final-tot">
+                  <span>Total (per month)</span>
+                  <span>+12$/mo</span>
+                </div>
+              </div>
+              <div class="form-btn">
+                <button class="back" data-inps="0" data-inpe="2">
+                  Go Back
+                </button>
+                <button class="form-btn-submit" data-inps="8" data-inpe="10">
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="form-inner hide">
+            <div class="thank-you">
+              <div class="img">
+                <img src="./assets/icon-thank-you.svg" />
+              </div>
+              <div class="content">
+                <div>Thank you!</div>
+                <div>
+                  Thanks for confirming your subscription! We hope you have fun
+                  using our platform. If you ever need support, please feel free
+                  to email us at support@loremgaming.com.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
